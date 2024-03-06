@@ -1,0 +1,41 @@
+@import "../../styles/functions.scss";
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(24);
+  &Item {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(25);
+
+    input[type="checkbox"] {
+      cursor: pointer;
+      appearance: none;
+      position: relative;
+      width: toRem(20);
+      height: toRem(20);
+      border: 2px solid var(--grayish-200);
+      transition: all 0.3s;
+      &:hover {
+        border-color: var(--green);
+      }
+      &::before {
+        opacity: 0;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: url("../../assets/icons/icon-check.svg");
+        transition: all 0.3s;
+      }
+    }
+    input[type="checkbox"]:checked {
+      background-color: var(--green);
+      border-color: var(--green);
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

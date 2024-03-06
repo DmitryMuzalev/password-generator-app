@@ -1,6 +1,6 @@
 import styles from "./Container.module.scss";
 
-function Container() {
-  return <div className={styles.container}>Container</div>;
+function Container({ children }) {
+  return <div className={styles.container}>{children}</div>;
 }
 export { Container };

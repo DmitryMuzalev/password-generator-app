@@ -1,0 +1,9 @@
+@import "../../styles/functions.scss";
+
+.header {
+  color: var(--grayish-400);
+  margin-bottom: toRem(40);
+  h1 {
+    font-size: toRem(24);
+  }
+}

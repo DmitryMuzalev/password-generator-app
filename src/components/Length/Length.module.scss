@@ -1,0 +1,64 @@
+@import "../../styles/functions.scss";
+@import "../../styles/mixins.scss";
+
+.length {
+  &Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: toRem(15);
+    &Value {
+      color: var(--green);
+      font-size: toRem(32);
+    }
+  }
+  &Range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    margin: toRem(15) 0;
+    height: toRem(8);
+
+    /* Thumb: webkit */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: toRem(30);
+      width: toRem(30);
+      background-color: var(--grayish-200);
+      border-radius: 50%;
+      border: none;
+      transition: 0.3s ease-in-out;
+      @include shadow(var(--grayish-200));
+    }
+
+    /* Thumb: Firefox */
+    &::-moz-range-thumb {
+      height: toRem(30);
+      width: toRem(30);
+      background-color: var(--grayish-200);
+      border-radius: 50%;
+      border: none;
+      transition: 0.3s ease-in-out;
+      @include shadow(var(--grayish-200));
+    }
+
+    /* Hover, active & focus Thumb: Webkit */
+    &::-webkit-slider-thumb:hover,
+    &:active::-webkit-slider-thumb,
+    &:focus::-webkit-slider-thumb {
+      background-color: var(--grayish-900);
+      @include shadow(var(--green));
+    }
+
+    /* Hover, active & focus Thumb: Firfox */
+    &::-moz-range-thumb:hover,
+    &:active::-moz-range-thumb,
+    &:focus::-moz-range-thumb {
+      background-color: var(--grayish-900);
+      @include shadow(var(--green));
+    }
+  }
+}
