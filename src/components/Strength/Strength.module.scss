@@ -1,0 +1,31 @@
+@import "../../styles/functions.scss";
+.strength {
+  background-color: var(--grayish-900);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: toRem(27);
+  text-transform: uppercase;
+  &Title {
+    color: var(--grayish-400);
+  }
+
+  &Status {
+    display: flex;
+    column-gap: toRem(15);
+  }
+
+  &Message {
+    font-size: toRem(24);
+  }
+  &Indicators {
+    display: flex;
+    column-gap: toRem(7);
+    span {
+      border: 2px solid var(--white);
+      display: block;
+      height: toRem(28);
+      width: toRem(10);
+    }
+  }
+}

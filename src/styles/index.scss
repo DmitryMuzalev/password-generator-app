@@ -18,6 +18,7 @@
   --fw-medium: 500;
 
   //_Colors:
+  --white: hsl(0, 100%, 100%); // #ffffff
   --grayish-200: hsl(252, 11%, 91%); // #e7e6eb
   --grayish-400: hsl(251, 9%, 53%); // #807c92
   --grayish-700: hsl(248, 10%, 15%); // #23222a
@@ -58,4 +59,24 @@ ul {
 .box {
   background-color: var(--grayish-700);
   padding: toRem(25) toRem(30);
+}
+
+.too_weak {
+  border-color: var(--red) !important;
+  background-color: var(--red);
+}
+
+.weak {
+  border-color: var(--orange) !important;
+  background-color: var(--orange);
+}
+
+.medium {
+  border-color: var(--yellow) !important;
+  background-color: var(--yellow);
+}
+
+.strong {
+  border-color: var(--green) !important;
+  background-color: var(--green);
 }

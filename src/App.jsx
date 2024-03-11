@@ -4,6 +4,7 @@ import { Password } from "./components/Password/Password";
 import { Generator } from "./components/Generator/Generator";
 import { Length } from "./components/Length/Length";
 import { Settings } from "./components/Settings/Settings";
+import { Strength } from "./components/Strength/Strength";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Generator>
         <Length />
         <Settings />
+        <Strength />
       </Generator>
     </Container>
   );
