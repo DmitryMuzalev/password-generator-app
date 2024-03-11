@@ -5,6 +5,7 @@ import { Generator } from "./components/Generator/Generator";
 import { Length } from "./components/Length/Length";
 import { Settings } from "./components/Settings/Settings";
 import { Strength } from "./components/Strength/Strength";
+import { Button } from "./components/Button/Button";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Length />
         <Settings />
         <Strength />
+        <Button />
       </Generator>
     </Container>
   );

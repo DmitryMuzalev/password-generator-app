@@ -1,0 +1,24 @@
+@import "../../styles/functions.scss";
+@import "../../styles/mixins.scss";
+
+.button {
+  cursor: pointer;
+  @include flex-center;
+  column-gap: toRem(20);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  color: var(--grayish-900);
+  padding: toRem(20);
+  transition: all 0.3s;
+  i {
+    font-size: toRem(12);
+  }
+  &:hover {
+    color: var(--green);
+    background-color: transparent;
+  }
+}

@@ -9,7 +9,7 @@ function Strength() {
     { id: 4, message: "strong" },
   ];
 
-  const currentStrengthLevels = strengthLevels[4];
+  const currentStrengthLevels = strengthLevels[0];
   return (
     <div className={styles.strength}>
       <p className={styles.strengthTitle}>strength</p>
