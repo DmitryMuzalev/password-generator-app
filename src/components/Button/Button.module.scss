@@ -21,4 +21,11 @@
     color: var(--green);
     background-color: transparent;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--grayish-200);
+    color: var(--grayish-900);
+    border: 2px solid var(--grayish-200);
+  }
 }

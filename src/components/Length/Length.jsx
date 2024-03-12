@@ -1,8 +1,8 @@
-import { useState } from "react";
 import styles from "./Length.module.scss";
+import { useContextApp } from "../../hook/useContextApp";
 
 function Length() {
-  const [length, setLength] = useState(10);
+  const { length, setLength } = useContextApp();
   return (
     <div className={styles.length}>
       <div className={styles.lengthInfo}>

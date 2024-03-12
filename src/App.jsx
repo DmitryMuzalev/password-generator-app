@@ -6,19 +6,22 @@ import { Length } from "./components/Length/Length";
 import { Settings } from "./components/Settings/Settings";
 import { Strength } from "./components/Strength/Strength";
 import { Button } from "./components/Button/Button";
+import { ContextApp } from "./Context";
 
 function App() {
   return (
-    <Container>
-      <Header>password generator</Header>
-      <Password />
-      <Generator>
-        <Length />
-        <Settings />
-        <Strength />
-        <Button />
-      </Generator>
-    </Container>
+    <ContextApp>
+      <Container>
+        <Header>password generator</Header>
+        <Password />
+        <Generator>
+          <Length />
+          <Settings />
+          <Strength />
+          <Button />
+        </Generator>
+      </Container>
+    </ContextApp>
   );
 }
 
