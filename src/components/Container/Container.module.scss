@@ -4,4 +4,7 @@
   width: 580px;
   padding: toRem(20);
   text-align: center;
+  @media (max-width: 479px) {
+    padding: toRem(20) toRem(10);
+  }
 }

@@ -61,4 +61,33 @@
       @include shadow(var(--green));
     }
   }
+
+  @media (max-width: 767px) {
+    &Info {
+      &Value {
+        font-size: toRem(28);
+      }
+    }
+    &Range {
+      height: toRem(6);
+
+      &::-webkit-slider-thumb {
+        height: toRem(26);
+        width: toRem(26);
+      }
+
+      &::-moz-range-thumb {
+        height: toRem(26);
+        width: toRem(26);
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
+    &Info {
+      &Value {
+        font-size: toRem(24);
+      }
+    }
+  }
 }
