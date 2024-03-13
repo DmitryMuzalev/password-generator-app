@@ -1,7 +1,7 @@
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
-const symbols = "!@#$%^&*()_-+=|/.,:;[]{}";
+const symbols = `!"#$%&'()*+,-./:;<=>?@[\]^_\`{|}~`;
 
 export function passwordGenerator(
   length,

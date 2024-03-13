@@ -1,3 +1,4 @@
+import { checkPasswords } from "./utils/checkPasswords";
 import { passwordGenerator } from "./utils/passwordGenerator";
 
 const { createContext, useState } = require("react");
@@ -11,22 +12,17 @@ export const ContextApp = ({ children }) => {
   //_Length:
   const [length, setLength] = useState(10);
 
-  //_Rating
-
   //_Settings:
   const [isUppercase, setIsUppercase] = useState(false);
   const [isLowercase, setIsLowercase] = useState(false);
   const [isNumbers, setIsNumbers] = useState(false);
   const [isSymbols, setIsSymbols] = useState(false);
 
+  //Strength
+  const [strength, setStrength] = useState("");
+
   const handlerSubmit = (e) => {
     e.preventDefault();
-
-    const rating = [isUppercase, isLowercase, isNumbers, isSymbols].reduce(
-      (acc, v) => acc + Number(v),
-      0
-    );
-
     const newPassword = passwordGenerator(
       length,
       isUppercase,
@@ -34,7 +30,13 @@ export const ContextApp = ({ children }) => {
       isNumbers,
       isSymbols
     );
+    const rating = [isUppercase, isLowercase, isNumbers, isSymbols].reduce(
+      (acc, v) => acc + Number(v),
+      0
+    );
+
     setPassword(newPassword);
+    setStrength(checkPasswords(length, rating));
   };
 
   const state = {
@@ -50,6 +52,7 @@ export const ContextApp = ({ children }) => {
     isSymbols,
     setIsSymbols,
     handlerSubmit,
+    strength,
   };
 
   return <Context.Provider value={state}>{children}</Context.Provider>;
