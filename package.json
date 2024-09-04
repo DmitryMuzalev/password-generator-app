@@ -1,6 +1,7 @@
 {
   "name": "password-generator-app",
   "version": "0.1.0",
+  "homepage": "https://DmitryMuzalev.github.io/password-generator-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,6 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "component": "generate-react component"
@@ -30,7 +33,7 @@
       ">0.2%",
       "not dead",
       "not op_mini all"
-    ],
+    ],о
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -38,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "generate-react-cli": "^8.4.1"
+    "generate-react-cli": "^8.4.1",
+    "gh-pages": "^6.1.1"
   }
 }
